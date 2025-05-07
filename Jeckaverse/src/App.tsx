@@ -1,4 +1,5 @@
 import './App.css';
+import './style.css';
 import { Link, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 
@@ -29,11 +30,23 @@ function App() {
           <iframe src="https://store.steampowered.com/widget/1443200/" frameBorder="0" width="646" height="190"></iframe>
         </div>
         <nav>
-          <Link to="/home">
-            <button className="intro-button">ENTER SITE</button>
-          </Link>
+            <Link to="/home">
+            <button
+              className="intro-button"
+              onClick={() => {
+              const elementsToClear = document.querySelectorAll('div > div, div > img');
+              elementsToClear.forEach((element) => {
+                element.innerHTML = '';
+                element.remove();
+              });
+              }}
+            >
+              ENTER SITE
+            </button>
+            </Link>
         </nav>
       </div>
+
       <Routes>
         <Route path="/home" element={<Home />} />
       </Routes>

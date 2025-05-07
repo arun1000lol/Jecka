@@ -1,0 +1,53 @@
+/* Home.css */
+.fullscreen-transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/src/assets/windowsxp.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    z-index: 9999;
+    pointer-events: none; 
+}
+
+.fullscreen-transition.active {
+    opacity: 1;
+}
+
+@font-face {
+    font-family: "Pixelated MS Sans Serif";
+    src: url('../../node_modules/xp.css/dist/ms_sans_serif.woff2') format('woff2');
+  }
+  
+  @font-face {
+    font-family: "Pixelated MS Sans Serif";
+    src: url('../../node_modules/xp.css/dist/ms_sans_serif_bold.woff2') format('woff2');
+    font-weight: bold;
+  }
+  
+
+.windowsxp-text{
+    font-family: "Pixelated MS Sans Serif", sans-serif;
+
+}
+
+.home-intro-text{
+    font-size: 1.5rem;
+    font-family: "Pixelated MS Sans Serif", sans-serif;
+}
+
+.audio-div{
+    display: flex;
+    justify-content: center;
+
+}
+.audio-button{
+    margin: 0 10px;
+    
+    
+}
+  
